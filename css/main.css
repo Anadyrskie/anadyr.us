@@ -1,10 +1,13 @@
 @font-face {
-    font-family: 'LovelyCoffee';
+    font-family: 'LovelyCoffee', cursive;
 
     src:  url('/assets/fonts/LovelyCoffee-jEVeO.ttf') format("truetype");
 }
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+@font-face {
+    font-family: "Dancing Script", cursive;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+}
 
 
 .title {
@@ -16,6 +19,7 @@
 }
 
 .body {
+    background-attachment: fixed;
     background-image: url("../assets/img/desert.webp");
     height: 1359px;
 }
