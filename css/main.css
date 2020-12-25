@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'LovelyCoffee';
+
+    src:  url('/assets/fonts/LovelyCoffee-jEVeO.ttf') format("truetype");
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+
+.title {
+    font-family: 'Dancing Script';
+    padding: 2rem;
+}
+.nav-item {
+    padding-right: 2rem;
+}
+
+.body {
+    background-image: url("../assets/img/desert.webp");
+    height: 1359px;
+}
