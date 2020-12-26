@@ -13,9 +13,10 @@ html {
     overflow-x: hidden;
 }
 
-.title {
+.nav-title {
     font-family: 'Dancing Script';
     padding: 2rem;
+    font-size: 1em;
 }
 .nav-item {
     padding-right: 2rem;

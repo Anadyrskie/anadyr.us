@@ -9,15 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="script" href="js/bootstrap.min.js">
-    <link rel="script" href="js/nav.js">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
     <title>Grace Martin!</title>
 
     <!--Shy Navbar-->
     <script>
         /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
         var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
+        window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("navbar").style.top = "0";
@@ -31,25 +38,29 @@
 <body>
 
 <!--Nav-->
-    <section id="navbar" class="navbar navbar-expand-sm navbar-collapse sticky-top navbar-light bg-light">
-            <a class="navbar-brand title" href="" >Grace Martin</a>
-        <div class="col"></div>
-        <div class="navbar flex-column nav-item" id="navbarNavItems">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#music">Music</a>
-                </li>
+<section id="navbar" class="navbar flex-wrap navbar-expand-md sticky-top navbar-light bg-light">
 
-                </ul>
-            </div>
+    <a class="navbar-brand nav-title" href="">Grace Martin</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="col"></div>
+    <div class="navbar flex-column nav-item" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#music">Music</a>
+            </li>
 
-    </section>
+        </ul>
+    </div>
+
+</section>
 <!--End Nav-->
 <div class="bg1 bg" style="max-height: 2464px;">
 
@@ -60,8 +71,14 @@
 </section>
 <div class="row pag-bak" style="">
     <h4 class="text-center" style="padding: 1rem">About Me!</h4>
-    <div class="col text-start text-wrap" style="padding-left: 4rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-    <div class="col-md-auto img-thumbnail" style="border: transparent"><img src="assets/img/grace-hair.jpg" class="media"></div>
+    <div class="col text-start text-wrap" style="padding-left: 4rem">Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="col-md-auto img-thumbnail" style="border: transparent"><img src="assets/img/grace-hair.jpg"
+                                                                            class="media"></div>
 </div>
 <!--End About-->
 
