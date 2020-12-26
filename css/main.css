@@ -35,6 +35,10 @@
     border-radius: 5px;
 }
 
+#navbar {
+    transition: top 0.3s
+}
+
 .bg {
 
 }
