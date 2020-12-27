@@ -66,17 +66,43 @@ html {
     min-height: 60px;
 }
 
-
-
-.fa {
-    font-size: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50px;
+.icon-bar {
+    transition: left 0.3s;
+    float: start;
+    position: fixed;
+    top: 95%;
+    -webkit-transform: translateY(-80%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
-.fa-facebook {
-    background: transparent ;
-    color: #3B5998;
+.social {
+    font-size: xx-large;
+    margin-right: 3px;
+}
+
+.instagram {
+    font-weight: bolder;
+    background: -webkit-linear-gradient( 45deg, #555bd0, #dd2f7f, #f4dfa5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social:hover {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}
+
+.youtube {
+    font-weight: bolder;
+    background: #FF0000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.spotify {
+    font-weight: bolder;
+    background: #1DB954;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
