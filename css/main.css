@@ -40,7 +40,7 @@ html {
 }
 
 #navbar {
-    transition: top 0.3s
+    transition: top 0.3s;
 }
 
 .bg {
@@ -67,7 +67,7 @@ html {
 }
 
 .icon-bar {
-    transition: left 0.3s;
+    transition: left 0.3s ease-in;
     float: start;
     position: fixed;
     top: 95%;
