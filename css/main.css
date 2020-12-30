@@ -32,6 +32,9 @@ html {
     transition: top 0.3s;
 }
 
+.content {
+    min-height: 100px;
+}
 
 .bg1 { background: url(../assets/img/cordova.jpg) no-repeat bottom right fixed;
     -webkit-background-size: cover;
@@ -56,6 +59,15 @@ html {
     min-height: 60px;
 }
 
+.bg3 {
+    background: url("../assets/img/wide-tree.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 60px;
+}
+
 .icon-bar {
     left: 1rem;
     transition: left 0.3s ease-in;
@@ -66,7 +78,6 @@ html {
     -webkit-transform: translateY(-80%);
     -ms-transform: translateY(-80%);
     transform: translateY(-50%);
-    margin-bottom: 5%;
 }
 
 .social {
