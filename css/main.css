@@ -21,19 +21,6 @@ html {
 .nav-item {
     padding-right: 2rem;
 }
-/*
-.body {
-    background-attachment: fixed;
-    background-size: 100%;
-    background-image: url("../assets/img/cordova.jpg");
-    min-height: available;
-}
-*/
-.pag-bak {
-
-    background-color: rgba(255, 255, 255, 1);
-    backdrop-filter: blur(9px);
-}
 
 .media {
     border-radius: 5px;
@@ -43,9 +30,6 @@ html {
     transition: top 0.3s;
 }
 
-.bg {
-
-}
 
 .bg1 { background: url(../assets/img/cordova.jpg) no-repeat bottom right fixed;
     -webkit-background-size: cover;
@@ -55,6 +39,10 @@ html {
     height: 100vh;
     min-height: 60px;
 }
+
+.bg {
+}
+
 
 .bg2 {
     background: url(../assets/img/desert.jpg) no-repeat bottom right fixed;
@@ -67,18 +55,25 @@ html {
 }
 
 .icon-bar {
+    left: 1rem;
     transition: left 0.3s ease-in;
     float: start;
     position: fixed;
     top: 95%;
     -webkit-transform: translateY(-80%);
-    -ms-transform: translateY(-50%);
+    -ms-transform: translateY(-80%);
     transform: translateY(-50%);
 }
 
 .social {
+
     font-size: xx-large;
     margin-right: 3px;
+}
+
+.social:hover {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
 }
 
 .instagram {
@@ -88,10 +83,7 @@ html {
     -webkit-text-fill-color: transparent;
 }
 
-.social:hover {
-    -webkit-filter: brightness(80%);
-    filter: brightness(80%);
-}
+
 
 .youtube {
     font-weight: bolder;
