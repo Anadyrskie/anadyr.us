@@ -11,6 +11,7 @@
 
 html {
     overflow-x: hidden;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .nav-title {
@@ -36,11 +37,12 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
     min-height: 60px;
 }
 
 .bg {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 
@@ -50,7 +52,6 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
     min-height: 60px;
 }
 
@@ -63,6 +64,7 @@ html {
     -webkit-transform: translateY(-80%);
     -ms-transform: translateY(-80%);
     transform: translateY(-50%);
+    margin-bottom: 5%;
 }
 
 .social {
