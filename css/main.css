@@ -4,6 +4,7 @@
     src:  url('/assets/fonts/LovelyCoffee-jEVeO.ttf') format("truetype");
 }
 
+
 @font-face {
     font-family: "Dancing Script", cursive;
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
@@ -61,6 +62,7 @@ html {
     float: start;
     position: fixed;
     top: 95%;
+    top: calc(var(--vh, 1vh) * 95);
     -webkit-transform: translateY(-80%);
     -ms-transform: translateY(-80%);
     transform: translateY(-50%);
