@@ -14,7 +14,7 @@
                 let result = getRandom(min, max)
                 //if int inputs, floors result to int
                 if (Number.isInteger(min) && Number.isInteger(max)) {
-                    result = Math.floor(result);
+                    result = Math.round(result);
                     console.log("if")
                 }
                 document.getElementById("result").innerText = result;
