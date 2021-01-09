@@ -5,11 +5,14 @@
     <title>Random!</title>
     <script>
         function random() {
+            //try-catch for anything other than numbers
             try {
+                //eval str input to int or float
                 let min = eval(document.getElementById("min").value);
                 let max = eval(document.getElementById("max").value);
-                console.log(min, max)
-                let result = getRnd(min, max)
+                //gets random num
+                let result = getRandom(min, max)
+                //if int inputs, floors result to int
                 if (Number.isInteger(min) && Number.isInteger(max)) {
                     result = Math.floor(result);
                     console.log("if")
@@ -20,8 +23,7 @@
             }
 
         }
-
-        function getRnd(min, max) {
+        function getRandom(min, max) {
             return Math.random() * (max - min + 1) + min;
         }
     </script>
