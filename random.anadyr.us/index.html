@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random!</title>
+    <script>
+        function random() {
+            try {
+                let min = eval(document.getElementById("min").value);
+                let max = eval(document.getElementById("max").value);
+                console.log(min, max)
+                let result = getRnd(min, max)
+                if (Number.isInteger(min) && Number.isInteger(max)) {
+                    result = Math.floor(result);
+                    console.log("if")
+                }
+                document.getElementById("result").innerText = result;
+            }
+            catch {
+                document.getElementById("result").innerText = "Numbers only please!"
+            }
+
+    }
+    function getRnd(min, max) {
+        return Math.random() * (max - min + 1)  + min;
+    }
+    </script>
+</head>
+<body>
+<form id="input">
+    <input type="text" id="min" placeholder="min"><br>
+    <input type="text" id="max" placeholder="max"><br>
+    <button type="button" onclick="random()">Submit</button>
+    <br>
+    <br>
+    <p id="result"></p>
+
+</form>
+
+</body>
+</html>
