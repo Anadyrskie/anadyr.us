@@ -15,18 +15,23 @@
                     console.log("if")
                 }
                 document.getElementById("result").innerText = result;
-            }
-            catch {
+            } catch {
                 document.getElementById("result").innerText = "Numbers only please!"
             }
 
-    }
-    function getRnd(min, max) {
-        return Math.random() * (max - min + 1)  + min;
-    }
+        }
+
+        function getRnd(min, max) {
+            return Math.random() * (max - min + 1) + min;
+        }
     </script>
+    <link href="main.css" rel="stylesheet">
 </head>
 <body>
+<div>
+    <p style="margin-bottom: 0px; font-size: large">Random number generator</p>
+    <p style="margin-top: 0px;">handles ints and floats</p>
+</div>
 <form id="input">
     <input type="text" id="min" placeholder="min"><br>
     <input type="text" id="max" placeholder="max"><br>
