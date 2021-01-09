@@ -7,7 +7,7 @@
         function random() {
             //try-catch for anything other than numbers
             try {
-                //eval str input to int or float
+                //cast str input to int or float
                 let min = eval(document.getElementById("min").value);
                 let max = eval(document.getElementById("max").value);
                 //gets random num
@@ -24,7 +24,7 @@
 
         }
         function getRandom(min, max) {
-            return Math.random() * (max - min + 1) + min;
+            return Math.random() * (max - min) + min;
         }
     </script>
     <link href="main.css" rel="stylesheet">
