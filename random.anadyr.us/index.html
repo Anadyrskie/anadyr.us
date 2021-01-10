@@ -5,33 +5,30 @@
     <title>Random!</title>
     <script>
         function random() {
-            //try-catch for anything other than numbers
-            try {
                 //cast str input to int or float
-                let min = eval(document.getElementById("min").value);
-                let max = eval(document.getElementById("max").value);
+                let min = parseFloat(document.getElementById("min").value);
+                let max = parseFloat(document.getElementById("max").value);
+                //defaults to 0
+                if (isNaN(min)) { min = 0; }
+                else if(isNaN(max)) { max = 0 }
                 //gets random num
-                let result = getRandom(min, max)
+                let result = (Math.random() * (max - min) + min);
                 //if int inputs, floors result to int
                 if (Number.isInteger(min) && Number.isInteger(max)) {
                     result = Math.round(result);
-                    console.log("if")
                 }
+                if (!isNaN(result)) {
                 document.getElementById("result").innerText = result;
-            } catch {
-                document.getElementById("result").innerText = "Numbers only please!"
-            }
-
-        }
-        function getRandom(min, max) {
-            return Math.random() * (max - min) + min;
+                }
+                else {
+                    document.getElementById("result").innerText = "Please enter a number";
+                }
         }
     </script>
-    <link href="main.css" rel="stylesheet">
 </head>
 <body>
 <div>
-    <p style="margin-bottom: 0px; font-size: large; font-family: sans-serif">Random number generator</p>
+    <p style="margin-bottom: 0; font-size: large; font-family: sans-serif">Random number generator</p>
     <p style="margin-top: 2px; font-size: 13pt;">handles ints and floats</p>
 </div>
 <form id="input">
