@@ -115,7 +115,10 @@ html {
 }
 
 @media only screen and (max-width: 400px) {
-    #about {
+   #about {
+        padding-left: 0;
+    }
+    #music{
         padding-left: 0;
     }
 }
