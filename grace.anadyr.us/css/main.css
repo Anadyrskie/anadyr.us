@@ -113,3 +113,9 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@media only screen and (max-width: 400px) {
+    #about {
+        padding-left: 0;
+    }
+}
