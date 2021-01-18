@@ -1,9 +1,8 @@
 @font-face {
     font-family: 'LovelyCoffee', cursive;
 
-    src:  url('/grace.anadyr.us/assetsanadyr.us/assets/fonts/LovelyCoffee-jEVeO.ttf') format("truetype");
+    src: url('/grace.anadyr.us/assetsanadyr.us/assets/fonts/LovelyCoffee-jEVeO.ttf') format("truetype");
 }
-
 
 @font-face {
     font-family: "Dancing Script", cursive;
@@ -20,6 +19,7 @@ html {
     padding: 2rem;
     font-size: 1em;
 }
+
 .nav-item {
     padding-right: 2rem;
 }
@@ -36,7 +36,8 @@ html {
     min-height: 100px;
 }
 
-.bg1 { background: url(../assets/img/cordova.jpg) no-repeat bottom right fixed;
+.bg1 {
+    background: url(../assets/img/cordova.jpg) no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -48,7 +49,6 @@ html {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
 }
-
 
 .bg2 {
     background: url(../assets/img/desert.jpg) no-repeat bottom right fixed;
@@ -93,12 +93,10 @@ html {
 
 .instagram {
     font-weight: bolder;
-    background: -webkit-linear-gradient( 45deg, #555bd0, #dd2f7f, #f4dfa5);
+    background: -webkit-linear-gradient(45deg, #555bd0, #dd2f7f, #f4dfa5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
 
 .youtube {
     font-weight: bolder;
@@ -115,10 +113,11 @@ html {
 }
 
 @media only screen and (max-width: 600px) {
-   #about {
+    #about {
         padding-left: 0;
     }
-    #music{
+
+    #music {
         padding-left: 0;
     }
 
