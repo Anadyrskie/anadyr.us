@@ -32,6 +32,10 @@ html {
     transition: top 0.3s;
 }
 
+#contact {
+    padding-top: 10vh;
+}
+
 .content {
     min-height: 100px;
 }
@@ -67,6 +71,8 @@ html {
     background-size: cover;
     min-height: 60px;
 }
+
+
 
 .icon-bar {
     left: 1rem;
@@ -119,6 +125,10 @@ html {
 
     #music {
         padding-left: 0;
+    }
+
+    #contact {
+        padding-top : 1vh;
     }
 
     .collapser:not(.show) {
