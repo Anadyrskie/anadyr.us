@@ -61,12 +61,14 @@ exec("/usr/bin/sudo /usr/bin/wg show wg0 allowed-ips", $clients);
     <form method="POST">
         <label for="ip">10.1</label>
         <input id="ip" type="text" name="ip" value=".0." required />
-        <label for="conf-type">AllowedIPs</label>
-            <input id="peer" type="radio" name="conf-type" value="10.1.0.1/16" checked>
-            <label for='peer'>10.1.0.1/16</label>
-            <input id="vpn" type="radio" name="conf-type" value="0.0.0.0/0">
-            <label for='vpn'>0.0.0.0/0</label>
+        <label for="conf-radios">AllowedIPs</label>
         <input type="submit" value="Create client">
+        <div id="conf-radios">
+        <input id="peer" type="radio" name="conf-type" value="10.1.0.1/16" checked>
+                    <label for='peer'>10.1.0.1/16</label>
+                    <input id="vpn" type="radio" name="conf-type" value="0.0.0.0/0">
+                    <label for='vpn'>0.0.0.0/0</label>
+        </div>
     </form>
 <table>
     <thead>
