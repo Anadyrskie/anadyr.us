@@ -41,7 +41,7 @@ Address = 10.1<?=$_POST["ip"]?>/16
 
 [Peer]
 PublicKey = aFRj3n7mVPl9POcNNIJSjN2JcRHp5ixqlcBizzTELGk
-AllowedIPs = <?=$_POST["conf-type"]?><br>
+AllowedIPs = <?=$_POST["conf-type"]?>
 Endpoint = anadyr.us:51820
 </pre>
     <?php die();
