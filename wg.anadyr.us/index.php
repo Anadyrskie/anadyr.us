@@ -41,7 +41,7 @@ Address = 10.1<?=$_POST["ip"]?>/16
 
 [Peer]
 PublicKey = aFRj3n7mVPl9POcNNIJSjN2JcRHp5ixqlcBizzTELGk
-AllowedIPs = 10.1.0.1/16
+AllowedIPs = <?=$_POST["conf-type"]?>
 Endpoint = anadyr.us:51820
 </pre>
     <?php die();
@@ -62,12 +62,10 @@ exec("/usr/bin/sudo /usr/bin/wg show wg0 allowed-ips", $clients);
         <label for="ip">10.1</label>
         <input id="ip" type="text" name="ip" value=".0." required />
         <label for="conf-type">AllowedIPs</label>
-        <div id="conf-type">
             <input id="peer" type="radio" name="conf-type" value="10.1.0.1/16" checked>
             <label for='peer'>10.1.0.1/16</label>
             <input id="vpn" type="radio" name="conf-type" value="0.0.0.0/0">
             <label for='vpn'>0.0.0.0/0</label>
-        </div>
         <input type="submit" value="Create client">
     </form>
 <table>
