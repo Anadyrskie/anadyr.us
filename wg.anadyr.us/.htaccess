@@ -1,0 +1,6 @@
+#Protect Directory
+AuthName "Dialog prompt"
+AuthType Basic
+AuthUserFile /var/www/anadyr.us/wg.anadyr.us/.htpasswd
+Require valid-user
+
