@@ -38,9 +38,10 @@ if (isset($_POST["ip"])) {
 PrivateKey = <?=$private?>
 
 Address = 10.1<?=$_POST["ip"]?>/16
+DNS = 1.1.1.1
 
 [Peer]
-PublicKey = aFRj3n7mVPl9POcNNIJSjN2JcRHp5ixqlcBizzTELGk
+PublicKey = aFRj3n7mVPl9POcNNIJSjN2JcRHp5ixqlcBizzTELGk=
 AllowedIPs = <?=$_POST["conf-type"]?>
 
 Endpoint = anadyr.us:51820
@@ -79,7 +80,9 @@ exec("/usr/bin/sudo /usr/bin/wg show wg0 allowed-ips", $clients);
     </tr>
     </thead>
     <tbody>
-    <?php foreach ($clients as $client) {
+    <?php
+    foreach ($clients as $client) {
+
         $arr = explode("\t", $client);
         echo "<tr><td>{$arr[0]}</td><td>{$arr[1]}</td></tr>";
     } ?>
