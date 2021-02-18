@@ -51,10 +51,10 @@ Endpoint = anadyr.us:51820
         file_put_contents("mobile.conf", $text);
         exec("/usr/bin/qrencode ansiutf8 -o /var/www/anadyr.us/wg.anadyr.us/mobile.png < /var/www/anadyr.us/wg.anadyr.us/mobile.conf");
         $qr = "<img src='mobile.png'>";
+        $text = $text . "\n" . $qr;
     } ?>
 <pre>
     <?=$text?>
-    <?=$qr?>
 </pre>
 <?php die();
 }
