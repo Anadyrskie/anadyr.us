@@ -33,20 +33,30 @@ if (isset($_POST["ip"])) {
     $res = exec("/usr/bin/sudo /usr/bin/wg set wg0 peer $public allowed-ips 10.1{$_POST['ip']}/32");
     $res = exec("/usr/bin/sudo /usr/bin/wg-quick down wg0");
     $res = exec("/usr/bin/sudo /usr/bin/wg-quick up wg0");
-    ?>
-<pre>[Interface]
-PrivateKey = <?=$private?>
 
-Address = 10.1<?=$_POST["ip"]?>/16
+
+$text = "[Interface]
+PrivateKey = $private
+
+Address = 10.1".$_POST["ip"]."/16
 DNS = 1.1.1.1
 
 [Peer]
 PublicKey = aFRj3n7mVPl9POcNNIJSjN2JcRHp5ixqlcBizzTELGk=
-AllowedIPs = <?=$_POST["conf-type"]?>
+AllowedIPs = ".$_POST["conf-type"]."
 
 Endpoint = anadyr.us:51820
+";
+    if (isset($_POST["mobile"])) {
+        file_put_contents("mobile.txt", $text);
+        $qr = exec("/usr/bin/qrencode mobile.txt");
+    } ?>
+<pre>
+    <?$text?>
+    <?$qr?>
 </pre>
-    <?php die();
+<?
+     die();
 }
 $clients = [];
 exec("/usr/bin/sudo /usr/bin/wg show wg0 allowed-ips", $clients);
@@ -65,11 +75,13 @@ exec("/usr/bin/sudo /usr/bin/wg show wg0 allowed-ips", $clients);
         <input id="ip" type="text" name="ip" value=".0." required />
         <input type="submit" value="Create client">
         <div id="conf-radios">
-        <label for="conf-radios">AllowedIPs</label>
-        <input id="peer" type="radio" name="conf-type" value="10.1.0.1/16" checked>
-                    <label for='peer'>10.1.0.1/16</label>
-                    <input id="vpn" type="radio" name="conf-type" value="0.0.0.0/0">
-                    <label for='vpn'>0.0.0.0/0</label>
+            <label for="conf-radios">AllowedIPs</label>
+            <input id="peer" type="radio" name="conf-type" value="10.1.0.1/16" checked>
+            <label for='peer'>10.1.0.1/16</label>
+            <input id="vpn" type="radio" name="conf-type" value="0.0.0.0/0">
+            <label for='vpn'>0.0.0.0/0</label>
+            <input id="mobile" type="checkbox" name="mobile" value="true">
+            <label for="mobile">QR</label>
         </div>
     </form>
 <table>
