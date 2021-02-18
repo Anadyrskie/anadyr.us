@@ -52,11 +52,10 @@ Endpoint = anadyr.us:51820
         $qr = exec("/usr/bin/qrencode mobile.txt");
     } ?>
 <pre>
-    <?$text?>
-    <?$qr?>
+    <?=$text?>
+    <?=$qr?>
 </pre>
-<?
-     die();
+<?php die();
 }
 $clients = [];
 exec("/usr/bin/sudo /usr/bin/wg show wg0 allowed-ips", $clients);
