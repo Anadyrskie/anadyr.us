@@ -1,5 +1,6 @@
 <?php
 ini_set('display_errors', true);
+function rmQR() { exec("rm mobile.png"); }
 function getPrivateKey(): string {
     return trim(exec("/usr/bin/sudo /usr/bin/wg genkey"));
 }
@@ -49,7 +50,8 @@ Endpoint = anadyr.us:51820
 ";
     if (isset($_POST["mobile"])) {
         file_put_contents("mobile.conf", $text);
-        exec("/usr/bin/qrencode -o /var/www/anadyr.us/wg.anadyr.us/mobile.png < /var/www/anadyr.us/wg.anadyr.us/mobile.conf ");
+        exec("/usr/bin/qrencode -o mobile.png < mobile.conf ");
+        exec("rm mobile.conf");
         $qr = "<img src='mobile.png'>";
         $text = $text . "\n" . $qr;
     } ?>
@@ -69,7 +71,8 @@ exec("/usr/bin/sudo /usr/bin/wg show wg0 allowed-ips", $clients);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wireguard Autoconfig</title>
 </head>
-<body>
+<body onbeforeunload="rm()">
+<script>function rm() {alert("<?php echo rmQR()?>")};</script>
     <form method="POST">
         <label for="ip">10.1</label>
         <input id="ip" type="text" name="ip" value=".0." required />
