@@ -49,7 +49,7 @@ Endpoint = anadyr.us:51820
 ";
     if (isset($_POST["mobile"])) {
         file_put_contents("mobile.conf", $text);
-        exec("/usr/bin/qrencode -t ansiutf8 -o /var/www/anadyr.us/wg.anadyr.us/mobile.png /var/www/anadyr.us/wg.anadyr.us/mobile.conf");
+        exec("/usr/bin/qrencode -t ansiutf8 -o /var/www/anadyr.us/wg.anadyr.us/mobile.png < /var/www/anadyr.us/wg.anadyr.us/mobile.conf");
         $qr = "<img src='mobile.png'>";
     } ?>
 <pre>
