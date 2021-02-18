@@ -48,8 +48,8 @@ AllowedIPs = ".$_POST["conf-type"]."
 Endpoint = anadyr.us:51820
 ";
     if (isset($_POST["mobile"])) {
-        file_put_contents("mobile.txt", $text);
-        $qr = exec("/usr/bin/qrencode mobile.txt");
+        file_put_contents("/var/www/anadyr.us/wg.anadyr.us/mobile.conf", $text);
+        $qr = fopen(exec("/usr/bin/qrencode -t ansiutf8 -o /var/www/anadyr.us/wg.anadyr.us/mobile.png /var/www/anadyr.us/wg.anadyr.us/mobile.conf"));
     } ?>
 <pre>
     <?=$text?>
