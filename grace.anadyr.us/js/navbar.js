@@ -5,7 +5,7 @@ const social_array = ["spotify", "youtube", "facebook", "instagram"];
 window.onscroll = function () {
     let i;
     var currentScrollPos = window.pageYOffset;
-    if (window.scrollY <= 0) {
+    if (window.pageYOffset <= 20) {
         document.getElementById("navbar").style.top = "0";
     }
     else if (prevScrollpos <= currentScrollPos) {
