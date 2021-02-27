@@ -5,7 +5,10 @@ const social_array = ["spotify", "youtube", "facebook", "instagram"];
 window.onscroll = function () {
     let i;
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos <= currentScrollPos) {
+    if (window.scrollY <= 0) {
+        document.getElementById("navbar").style.top = "0";
+    }
+    else if (prevScrollpos <= currentScrollPos) {
         document.getElementById("navbar").style.top = "-75px";
         document.getElementById("social-bar").style.left = "-160px";
         /*for (x of social_array) {
