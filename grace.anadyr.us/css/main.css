@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'LovelyCoffee', cursive;
 
-    src: url('/grace.anadyr.us/assetsanadyr.us/assets/fonts/LovelyCoffee-jEVeO.ttf') format("truetype");
+    src: url('../assets/fonts/LovelyCoffee-jEVeO.ttf') format("truetype");
 }
 
 @font-face {
@@ -41,10 +41,13 @@ html {
 }
 
 .bg1 {
+    background-attachment: scroll;
     background: url(../assets/img/cordova.jpg) no-repeat bottom right fixed;
+    -webkit-background-origin: border-box;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-origin: border-box;
     background-size: cover;
     min-height: 60px;
 }
@@ -56,15 +59,18 @@ html {
 
 .bg2 {
     background: url(../assets/img/desert.jpg) no-repeat bottom right fixed;
+    -webkit-background-origin: border-box;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-origin: border-box;
     background-size: cover;
     min-height: 60px;
+
 }
 
 .bg3 {
-    background: url("../assets/img/wide-tree.jpg") no-repeat center fixed;
+    background: url("../assets/img/wide-tree.jpg") border-box no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -118,7 +124,12 @@ html {
     -webkit-text-fill-color: transparent;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+    .bg {
+        background-attachment: scroll;
+        background-position-x: right;
+        background-position-y: bottom;
+    }
     #about {
         padding-left: 0;
     }
